@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>数据库管理</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/usermanage.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="searchBar">
+                <div id="searchinput" hidden="hidden">
+                    <form>
+                        <input type="text" width="200" placeholder="输入用户名" />
+                        <input type="button" value="搜索" />
+                    </form>
+                </div>
+                <div id="addUser">
+                    <input type="button" value="添加新用户" onclick="showUserInputPopup()" />
+                </div>
+            </div>
+            <div id="userlist">
+                <table id="usertable">
+                    <tr>
+                        <th width="5%">ID</th>
+                        <th width="20%">用户名</th>
+                        <th width="30%">密码(MD5)</th>
+                        <th width="5%">权限</th>
+                        <th width="30%">邮箱</th>
+                        <th width="10%">操作</th>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="mask" id="mask">
+                <div class="addUserPopup" id="login">
+                    <div class="inputuserinfo">
+                        <label class="label-input">学号：</label>
+                        <input type="text" id="username" />
+                    </div>
+                    <div class="inputuserinfo">
+                        <label class="label-input">密码：</label>
+                        <input type="text" id="password" />
+                    </div>
+                    <div class="inputuserinfo">
+                        <label class="label-input">邮箱：</label>
+                        <input type="text" id="email" />
+                    </div>
+                    <div class="inputbutton">
+                        <input type="button" value="取消" onclick="closePopup()" />
+                        <input type="button" value="添加" onclick="addUser()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="../js/dbmanage.js"></script>
+    <script type="text/javascript">
+        window.onload = getUsers();
+    </script>
+</html>

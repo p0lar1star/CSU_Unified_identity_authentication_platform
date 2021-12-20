@@ -1,0 +1,229 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* logoCSS样式 */
+.logo {
+    position: absolute;
+    margin: 40px 0px 0px 195px;
+}
+
+.logo img {
+    width: 246px;
+}
+
+.logo span {
+    display: inline-block;
+    position: absolute;
+    height: 38px;
+    line-height: 38px;
+    top: 15px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 24px;
+    width: 160px;
+}
+
+.dzwrap {
+    width: 600px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrap {
+    width: 416px;
+    max-height: 531px;
+    min-height: 456px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 20% auto 0;
+}
+
+.main {
+    width: calc(100% - 76px);
+    height: 350px;
+    padding: 22px 38px;
+}
+
+.tabHead {
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    font-size: 12px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.tabHead span {
+    display: block;
+    width: 80px;
+    float: left;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 8px 0;
+}
+
+.tabHead span.active {
+    border-bottom: 1px solid #2B6CDB;
+}
+
+.tabHead span a {
+    color: #34363E;
+    text-decoration: none;
+}
+
+.tabHead span.active a {
+    color: #2B6CDB;
+}
+
+.login-pc {
+    position: absolute;
+    width: 340px;
+    height: 300px;
+}
+
+.login-pc #pwdLoginDiv #pwdFromId {
+    position: absolute;
+    width: 340px;
+    height: 300px;
+}
+
+#pwdFromId .form {
+    position: absolute;
+    width: 340px;
+    height: 300px;
+}
+
+.help {
+    position: absolute;
+    clear: both;
+    margin-top: 24px;
+}
+
+.form .m-account,
+.form .m-phone {
+    border-radius: 5px;
+    background: #fff;
+}
+
+.form .m-account .item,
+.form .m-phone .item {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-radius: 4px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.form .m-account>div,
+.form .m-phone>div {
+    position: relative;
+    overflow: hidden;
+}
+
+.form .prex-icon {
+    position: absolute;
+    top: 4px;
+    left: 2px;
+}
+
+.form .m-account>div>input,
+.form .m-phone>div>input {
+    width: 70%;
+    border: none;
+    height: 48px;
+    margin-left: 48px;
+    outline: none;
+}
+
+.btn {
+    margin-top: 35px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 50px;
+    background: #2368de;
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 12px;
+}
+
+.forget-btn {
+    width: 100%;
+    height: 50px;
+    background: #2368de;
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 12px;
+}
+
+.footer {
+    width: calc(100% - 65px);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 58px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 6px 6px;
+    display: flex;
+    align-items: Center;
+    padding: 0 32px;
+}
+
+.banquan {
+    width: 416px;
+    margin: 0px auto 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+    text-align: center;
+}
+
+.json_item{
+    display: none;
+    visibility: hidden;
+    border: none;
+}
+
+.form .code .get-code{
+  text-decoration: none;
+  background: none;
+  color: #2B6CDB;
+  padding: 6px 8px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-family: 'Microsoft YaHei';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.form .captcha .captcha-img {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 86px;
+  height: 30px;
+}

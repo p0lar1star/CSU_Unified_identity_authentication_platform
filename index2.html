@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>统一身份认证平台</title>
+        <style type="text/css">
+            body {
+                background: url(img/bg.png) no-repeat;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        </style>
+        <link href="css/homepage.css" type="text/css" rel="stylesheet" />
+        <link href="css/lunbotu.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+        <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
+        <div class="logo">
+            <img src="img/logo.png"><span>统一身份认证</span>
+        </div>
+        <!-- 轮播图 -->
+        <div id="slider">
+            <div class="lunbotu">
+                <div class="box">
+                    <img src="img/lunbotu1.jpg" alt="lunbotu1">
+                    <img src="img/lunbotu2.jpg" alt="lunbotu2">
+                    <img src="img/lunbotu3.jpg" alt="lunbotu3">
+                    <img src="img/lunbotu4.jpg" alt="lunbotu4">
+                    <img src="img/lunbotu5.jpg" alt="lunbotu5">
+                    <img src="img/lunbotu1.jpg" alt="lunbotu1">
+                </div>
+            </div>
+        </div>
+        <div class="dzwrap">
+            <div class="wrap">
+                <!-- <section> 标签定义了文档的某个区域。比如章节、头部、底部或者文档的其他区域。 -->
+                <section class="main">
+                    <div class="tabHead" style="">
+                        <span id="pwdLoginSpan" style="width: 50%;">
+                            <a id="userNameLogin_a" onclick="loadXMLDoc1()" class="loginFont_a">账号登录</a>
+                        </span>
+                        <span id="phoneLoginSpan" class="active selected_underline" style="width: 50%;">
+                            <a id="dynamicLogin_a" onclick="loadXMLDoc2()" class="loginFont_a">动态码登录</a>
+                        </span>
+                    </div>
+                    <div class="login-pc">
+                        <!-- 手机动态码登录 -->
+                        <div id="phoneLoginDiv" style="">
+                            <div>
+                                <div class="methods">
+                                </div>
+                                <!-- 表单操作 -->
+                                <form class="loginFromClass" method="post" id="phoneFromId" action="">
+                                    <div class="form">
+                                        <!-- 动态码登录 -->
+                                        <div class="m-phone">
+                                            <!-- 邮箱框 -->
+                                            <div class="username item" id="loginSelectArea">
+                                                <span class="prex-icon">
+                                                    <img src="img/user1.png" class="login-icon">
+                                                </span>
+                                                <input type="text" id="username" name="username" autocomplete="off"
+                                                    placeholder="请输入邮箱号" title="请输入邮箱号" value="">
+                                            </div>
+                                            <!-- 图片验证码框 -->
+                                            <div class="captcha item" id="captchaDiv_code">
+                                                <span class="prex-icon">
+                                                    <img src="img/captcha1.png" class="login-icon">
+                                                </span>
+                                                <input type="text" id="captcha" name="captcha" placeholder="请输入验证码"
+                                                    title="请输入验证码" maxlength="4" />
+                                                <span class="captcha-img">
+                                                    <img id="captchaImg" alt="验证码错误" height="30px"
+                                                        src="./captcha/captcha.php" onclick="reloadCaptcha()">
+                                                </span>
+                                            </div>
+                                            <!-- 邮箱动态验证码框 -->
+                                            <div class="code item">
+                                                <span class="prex-icon">
+                                                    <img src="img/pass1.png" class="login-icon">
+                                                </span>
+                                                <i class="auth_icon auth_icon_bar"></i>
+                                                <input type="text" id="dynamicCode" name="dynamicCode"
+                                                    placeholder="请输入邮箱动态码" title="请输入邮箱动态码" maxlength="10" />
+                                                <a class="get-code" onclick="dynamicCodefunction()">
+                                                    <em class="getCodeText">获取动态码</em>
+                                                </a>
+                                            </div>
+                                            <!-- 登录按钮 -->
+                                            <div class="btn">
+                                                <a type="submit" id="login_submit" class="login-btn"
+                                                    href="javascript:void(0);" onclick="loginfunction2()">登录</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="footer">
+                <p class="banquan">版权所有 © 2021 中南大学信息与网络中心 保留所有权利. 技术支持：0731-88830426 邮箱：app@csu.edu.cn</p>
+            </div>
+    </body>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("captchaImg").src = "./captcha/captcha.php";
+        }
+    </script>
+</html>

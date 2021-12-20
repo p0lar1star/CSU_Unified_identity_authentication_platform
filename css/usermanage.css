@@ -1,0 +1,85 @@
+#content {
+    width: 100%;
+    /* max-width定义了该div元素的最大长度 */
+    max-width: 1000px;
+    min-width: 300px;
+    /* 块级元素占一行，在该行内水平居中，竖直方向为0 */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#searchBar {
+    height: 30px;
+}
+
+#searchBar #searchinput {
+    float: left;
+}
+
+#searchBar #addUser {
+    float: right;
+}
+
+#usertable {
+    width: 100%;
+    /* 合并边框 */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#usertable td,
+#usertable th {
+    border: 1px solid black;
+}
+
+#usertable tr:nth-child(even) {
+    background: #ccc;
+
+}
+
+.useroperator {
+    margin-right: 20px;
+    color: blue;
+}
+
+#popupcontent {
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    background-color: #F9F9F9;
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mask .addUserPopup {
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background-color: #fff;
+    margin: 150px auto;
+}
+
+.mask .addUserPopup .inputuserinfo {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.mask .addUserPopup .inputbutton {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    float: right;
+}

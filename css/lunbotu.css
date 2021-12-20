@@ -1,0 +1,80 @@
+.lunbotu {
+    position: absolute;
+    margin: 250px 0 0 80px;
+    width: 600px;
+    height: 350px;
+    border: 3px solid black;
+    background-color: blue;
+    overflow: hidden;
+    user-select: none;
+}
+
+.box {
+    width: calc(600px * 6);
+    /* 用动画实现轮播的效果，绑定的@keyframe名称为slider 
+    10s内完成 速度曲线为ease-in-out（动画以低速开始和结束）
+    infinite 规定动画应该无限次播放
+    */
+    animation: slider 15s linear infinite;
+}
+
+.box img {
+    /* 将图片间距用浮动清除掉 */
+    float: left;
+    /* 图片显示尺寸 */
+    width: 600px;
+    height: 350px;
+}
+
+/* 
+    使用@keyframes规则，你可以创建动画。
+    创建动画是通过逐步改变从一个CSS样式设定到另一个。
+    在动画过程中，您可以更改CSS样式的设定多次。
+    指定的变化时发生时使用％，或关键字"from"和"to"，这和0％到100％相同。
+    0％是开头动画，100％是动画完成。
+*/
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-600px)
+    }
+
+    20% {
+        transform: translateX(-600px)
+    }
+
+    30% {
+        transform: translateX(-1200px)
+    }
+
+    40% {
+        transform: translateX(-1200px)
+    }
+
+    50% {
+        transform: translateX(-1800px)
+    }
+
+    60% {
+        transform: translateX(-1800px)
+    }
+
+    70% {
+        transform: translateX(-2400px)
+    }
+
+    80% {
+        transform: translateX(-2400px)
+    }
+
+    90% {
+        transform: translateX(-3000px)
+    }
+
+    100% {
+        transform: translateX(-3000px)
+    }
+}

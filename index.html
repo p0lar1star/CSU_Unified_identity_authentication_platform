@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>统一身份认证平台</title>
+    <style type="text/css">
+        body {
+            background: url(img/bg.png) no-repeat;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+    <link href="css/homepage.css" type="text/css" rel="stylesheet" />
+    <link href="css/lunbotu.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="img/logo.png"><span>统一身份认证</span>
+    </div>
+    <!-- 轮播图 -->
+    <div id="slider">
+        <div class="lunbotu">
+            <div class="box">
+                <img src="img/lunbotu1.jpg" alt="lunbotu1">
+                <img src="img/lunbotu2.jpg" alt="lunbotu2">
+                <img src="img/lunbotu3.jpg" alt="lunbotu3">
+                <img src="img/lunbotu4.jpg" alt="lunbotu4">
+                <img src="img/lunbotu5.jpg" alt="lunbotu5">
+                <img src="img/lunbotu1.jpg" alt="lunbotu1">
+            </div>
+        </div>
+    </div>
+    <div class="dzwrap">
+        <div class="wrap">
+            <!-- <section> 标签定义了文档的某个区域。比如章节、头部、底部或者文档的其他区域。 -->
+            <section class="main">
+                <div class="tabHead" style="">
+                    <span id="pwdLoginSpan" class="active selected_underline" style="width: 50%;">
+                        <a id="userNameLogin_a" onclick="loadXMLDoc1()" class="loginFont_a">账号登录</a></span>
+                    <span id="phoneLoginSpan" style="width: 50%;">
+                        <a id="dynamicLogin_a" class="loginFont_a" onclick="loadXMLDoc2()">动态码登录</a>
+                    </span>
+                </div>
+                <div class="login-pc">
+                    <!-- 用户名密码登录 -->
+                    <div id="pwdLoginDiv" style="">
+                        <div>
+                            <div class="methods">
+                            </div>
+                            <!-- 表单操作 -->
+                            <form class="loginFromClass" method="post" id="pwdFromId" action="">
+                                <div class="form">
+                                    <!-- 用户名密码登录 -->
+                                    <div class="m-account">
+                                        <!-- 用户名框 -->
+                                        <div class="username item">
+                                            <span class="prex-icon"><img src="img/user1.png" class="login-icon"></span>
+                                            <!-- 
+                                                placeholder 属性提供可描述输入字段预期值的提示信息（hint）。
+                                                该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+                                                -->
+                                            <input id="username" name="username" type="text" placeholder="请输入学号/工号"
+                                                title="请输入学号/工号" value="" />
+                                        </div>
+                                        <!-- 密码框 -->
+                                        <div class="password item">
+                                            <span class="prex-icon"><img src="img/pass1.png" class="login-icon"></span>
+                                            <input id="password" name="passwordText" type="password" placeholder="请输入密码"
+                                                title="请输入密码" value="" />
+                                        </div>
+                                        <!-- 登录按钮 -->
+                                        <div class="btn">
+                                            <a type="submit" id="login_submit" class="login-btn"
+                                                href="javascript:void(0);" onclick="loginfunction1()">登录</a>
+                                        </div>
+                                        <!-- 忘记密码 -->
+                                        <div class="help">
+                                            <a id="retrievePassId" href="javascript:void(0);" class="forget-btn"
+                                                title="通过邮件方式找回密码" onclick="jmptoforgetpassword();">忘记密码</a>
+                                        </div>
+                                        <!-- 修改密码 -->
+                                        <div class="help">
+                                            <a id="retrievePassId" href="javascript:void(0);" class="forget-btn"
+                                                title="修改密码" onclick="jmptochangepassword();">修改密码</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        </section>
+        <div class="footer">
+            <p class="banquan">版权所有 © 2021 中南大学信息与网络中心 保留所有权利. 技术支持：0731-88830426 邮箱：app@csu.edu.cn</p>
+        </div>
+</body>
+
+</html>

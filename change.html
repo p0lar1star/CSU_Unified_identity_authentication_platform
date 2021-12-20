@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>修改密码</title>
+        <style type="text/css">
+            body {
+                background: url(img/bg.png) no-repeat;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .input-label {
+                display: inline-block;
+                text-align: right;
+                width: 47%;
+            }
+
+            .reg-inpiut {
+                height: 30px;
+                line-height: 30px;
+            }
+        </style>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/password.js"></script>
+    </head>
+    <body>
+        <form id="changepwd" class="changepwd" action="">
+            <div class="container">
+                <div class="reg-box">
+                    <div class="main">
+                        <h1 style="text-align: center">修改密码</h1>
+                        <form action="" method="post" class="reg-form">
+                            <div class="reg-inpiut">
+                                <label class="input-label">用户名：</label>
+                                <input type="text" id="username" placeholder="请输入用户名" style="width: 150px;" />
+                            </div>
+                            <div class="reg-inpiut">
+                                <label class="input-label">原密码：</label>
+                                <input type="password" id="oldpwd" placeholder="请输入原密码" style="width: 150px;"
+                                    vertical-align:middle; />
+                            </div>
+                            <div class="reg-inpiut">
+                                <label class="input-label">新密码：</label>
+                                <input type="password" id="newpwd" style="width: 150px;" placeholder="请输入新密码"
+                                    vertical-align:middle; />
+                            </div>
+                            <div class="reg-inpiut">
+                                <label class="input-label">确认新密码：</label>
+                                <input type="password" id="confirm_newpwd" style="width: 150px;" vertical-align:middle;
+                                    placeholder="请再次输入新密码" />
+                            </div>
+                            <div class="reg-inpiut">
+                                <label class="input-label">验证码：</label>
+                                <span>
+                                    <input type="text" id="captcha" style="width: 150px;" max="4" placeholder="输入验证码"
+                                        vertical-align:middle />
+                                    <img id="captchaImg" style="vertical-align: middle;" alt="验证码加载错误" title="点击切换验证码"
+                                        src="./captcha/captcha.php" onclick="reloadCaptcha()" />
+                                </span>
+                            </div>
+                            <div class="submit-box reg-inpiut">
+                                <input type="button" id="submit" value="修改密码" style="margin-left:47%;"
+                                    onclick="changepassword()" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("captchaImg").src = "./captcha/captcha.php";
+        }
+    </script>
+</html>
