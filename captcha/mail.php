@@ -45,7 +45,7 @@ $dynamicCode = substr($_SESSION['dynamicCode'], 0, 6);
 // 调用邮件api
 $emailtext = "Your Verification Code is ";
 $emailtext .= $dynamicCode;
-$url = "https://api.dzzui.com/api/mail?Host=smtp.qq.com&Username=1411508780@qq.com&Password=lwpybeerqjcnichi&Port=465&SMTPSecure=ssl&addAddress=";
+$url = "https://api.dzzui.com/api/mail?Host=smtp.qq.com&Username=1411508780@qq.com&Password=nqbkdmsieibeigba&Port=465&SMTPSecure=ssl&addAddress=";
 $url .= $postemail;
 $url .= "&title=Your%20Verification%20Code&text=";
 $url .= $emailtext;

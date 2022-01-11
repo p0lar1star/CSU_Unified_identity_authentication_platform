@@ -12,7 +12,7 @@
 .box {
     width: calc(600px * 6);
     /* 用动画实现轮播的效果，绑定的@keyframe名称为slider 
-    10s内完成 速度曲线为ease-in-out（动画以低速开始和结束）
+    15s内完成 速度曲线为ease-in-out（动画以低速开始和结束）
     infinite 规定动画应该无限次播放
     */
     animation: slider 15s linear infinite;

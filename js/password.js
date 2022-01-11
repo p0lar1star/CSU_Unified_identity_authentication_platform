@@ -84,8 +84,8 @@ function act(cls) {
         alert(cls.success_message);
     } else {
         alert(cls.error_message);
+        reloadCaptcha();
     }
-    reloadCaptcha();
 }
 
 // 正则表达式验证邮箱,邮箱格式正确返回true，否则返回false
